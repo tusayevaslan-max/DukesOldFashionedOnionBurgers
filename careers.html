@@ -40,37 +40,69 @@
 <main id="main">
 
   <!-- ================= PAGE HERO ================= -->
-  <section class="page-hero">
-    <div class="wrap">
-      <p class="kicker">Careers</p>
-      <h1>Join the crew behind the griddle</h1>
-      <p>We're always looking for hard-working, friendly people to join the Duke's team in La Mesa. No experience? We'll train you. Just bring the work ethic.</p>
+  <section class="page-hero" style="background-image:linear-gradient(180deg, rgba(20,14,10,0.35), rgba(20,14,10,0.78)), url('images/careers-crew.jpg'); background-size:cover; background-position:center 28%; color:var(--white); padding-bottom:0;">
+    <div class="wrap" style="text-align:center;">
+      <p class="kicker" style="color:var(--orange-300); opacity:1;">Careers</p>
+      <h1 style="color:var(--white);">Join the crew behind the griddle</h1>
+      <p style="color:#f0e4da; margin:0 auto;">We're always looking for hard-working, friendly people to join the Duke's team in La Mesa. No experience? We'll train you. Just bring the work ethic.</p>
     </div>
-  </section>
 
-  <!-- ================= OPEN ROLES ================= -->
-  <section style="background:var(--cream); padding-top:56px;">
-    <div class="wrap">
-      <div class="section-head">
-        <div>
-          <p class="kicker">Open Roles</p>
-          <h2>Current openings in La Mesa</h2>
-        </div>
-        <p>No positions are the exact fit? Give us a call anyway &mdash; we're always happy to meet good people.</p>
+    <!-- ================= JOB APPLICATION ================= -->
+    <div class="job-app-grid" style="margin-top:56px;">
+      <div class="job-app-info">
+        <h2>Job<br>Application</h2>
+        <hr>
+        <p>Please complete the form to apply for a position with us.</p>
       </div>
-      <div class="careers-roles">
-        <div class="role-card">
-          <h4>Line Cook</h4>
-          <span>Full &amp; part time</span>
-        </div>
-        <div class="role-card">
-          <h4>Front Counter / Cashier</h4>
-          <span>Part time</span>
-        </div>
-        <div class="role-card">
-          <h4>Shift Lead</h4>
-          <span>Full time</span>
-        </div>
+      <div class="job-app-form">
+        <form action="mailto:careers@dukesoldfashionedonionburgers.com" method="post" enctype="text/plain" class="job-app-form-card">
+          <div class="job-field-row">
+            <div class="job-field">
+              <label for="first-name">First Name</label>
+              <input type="text" id="first-name" name="First Name">
+            </div>
+            <div class="job-field">
+              <label for="last-name">Last Name</label>
+              <input type="text" id="last-name" name="Last Name">
+            </div>
+          </div>
+          <div class="job-field-row">
+            <div class="job-field">
+              <label for="dob">Date of Birth</label>
+              <input type="date" id="dob" name="Date of Birth">
+            </div>
+            <div class="job-field">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="Email Address" required>
+            </div>
+          </div>
+          <div class="job-field-row">
+            <div class="job-field">
+              <label for="phone">Phone *</label>
+              <input type="tel" id="phone" name="Phone" required>
+            </div>
+            <div class="job-field">
+              <label for="position">Position Applying For</label>
+              <select id="position" name="Position Applying For">
+                <option value="">Select a position</option>
+                <option>Line Cook</option>
+                <option>Front Counter / Cashier</option>
+                <option>Shift Lead</option>
+              </select>
+            </div>
+          </div>
+          <div class="job-field-row">
+            <div class="job-field">
+              <label for="start-date">Available Start Date</label>
+              <input type="date" id="start-date" name="Available Start Date">
+            </div>
+            <div class="job-field">
+              <label for="resume">Link to Your Resume *</label>
+              <input type="url" id="resume" name="Resume Link" placeholder="https://" required>
+            </div>
+          </div>
+          <button type="submit" class="job-submit">Submit</button>
+        </form>
       </div>
     </div>
   </section>
