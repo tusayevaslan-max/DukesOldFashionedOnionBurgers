@@ -55,49 +55,46 @@
         <p>Please complete the form to apply for a position with us.</p>
       </div>
       <div class="job-app-form">
-        <form action="mailto:careers@dukesoldfashionedonionburgers.com" method="post" enctype="text/plain" class="job-app-form-card">
-          <div class="job-field-row">
+        <form id="job-application-form" action="mailto:careers@dukesoldfashionedonionburgers.com" method="post" enctype="text/plain" class="job-app-form-card" data-application-email="careers@dukesoldfashionedonionburgers.com" aria-describedby="application-note">
+          <div class="job-field-grid">
             <div class="job-field">
-              <label for="first-name">First Name</label>
-              <input type="text" id="first-name" name="First Name">
+              <label for="first-name">First Name <span class="required-marker" aria-hidden="true">*</span></label>
+              <input type="text" id="first-name" name="First Name" autocomplete="given-name" required>
             </div>
             <div class="job-field">
-              <label for="dob">Date of Birth</label>
-              <input type="date" id="dob" name="Date of Birth">
+              <label for="last-name">Last Name <span class="required-marker" aria-hidden="true">*</span></label>
+              <input type="text" id="last-name" name="Last Name" autocomplete="family-name" required>
             </div>
             <div class="job-field">
-              <label for="phone">Phone *</label>
-              <input type="tel" id="phone" name="Phone" required>
+              <label for="phone">Phone <span class="required-marker" aria-hidden="true">*</span></label>
+              <input type="tel" id="phone" name="Phone" autocomplete="tel" inputmode="tel" required>
             </div>
             <div class="job-field">
-              <label for="position">Position Applying For</label>
-              <select id="position" name="Position Applying For">
-                <option value="">Select a position</option>
+              <label for="email">Email Address <span class="required-marker" aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="Email Address" autocomplete="email" required>
+            </div>
+            <div class="job-field">
+              <label for="position">Position Applying For <span class="required-marker" aria-hidden="true">*</span></label>
+              <select id="position" name="Position Applying For" required>
+                <option value="" selected disabled>Select a position</option>
                 <option>Line Cook</option>
                 <option>Front Counter / Cashier</option>
                 <option>Shift Lead</option>
               </select>
             </div>
-          </div>
-          <div class="job-field-row">
-            <div class="job-field">
-              <label for="last-name">Last Name</label>
-              <input type="text" id="last-name" name="Last Name">
-            </div>
             <div class="job-field">
               <label for="start-date">Available Start Date</label>
               <input type="date" id="start-date" name="Available Start Date">
             </div>
-            <div class="job-field">
-              <label for="email">Email Address *</label>
-              <input type="email" id="email" name="Email Address" required>
-            </div>
-            <div class="job-field">
-              <label for="resume">Link to Your Resume *</label>
-              <input type="url" id="resume" name="Resume Link" placeholder="https://" required>
+            <div class="job-field job-field-full">
+              <label for="resume">Resume link <span class="optional-label">(optional)</span></label>
+              <input type="url" id="resume" name="Resume Link" placeholder="https://" autocomplete="url" aria-describedby="resume-help">
+              <p class="job-field-help" id="resume-help">Use a Google Drive or Dropbox link that anyone with the link can open.</p>
             </div>
           </div>
-          <button type="submit" class="job-submit">Submit</button>
+          <p class="job-required-note"><span class="required-marker" aria-hidden="true">*</span> Required fields</p>
+          <button type="submit" class="job-submit">Open application email</button>
+          <p class="job-submit-note" id="application-note">This opens a pre-filled email with your application. Press Send in that email to finish applying.</p>
         </form>
       </div>
     </div>
@@ -138,7 +135,7 @@
       <div class="menu-cta">
         <div>
           <h3>Ready to apply?</h3>
-          <p>Give us a call and ask about current openings.</p>
+          <p>Questions before you apply? Give us a call.</p>
         </div>
         <a href="tel:+16194396177" class="btn btn-white">(619) 439-6177</a>
       </div>

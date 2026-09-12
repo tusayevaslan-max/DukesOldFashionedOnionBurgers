@@ -19,4 +19,32 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
   }
+
+  var jobForm = document.getElementById('job-application-form');
+  if (jobForm) {
+    jobForm.addEventListener('submit', function (event) {
+      if (!jobForm.checkValidity()) {
+        return;
+      }
+
+      event.preventDefault();
+
+      var formData = new FormData(jobForm);
+      var applicationLines = [];
+      formData.forEach(function (value, key) {
+        var cleanedValue = String(value).trim();
+        if (cleanedValue) {
+          applicationLines.push(key + ': ' + cleanedValue);
+        }
+      });
+
+      var recipient = jobForm.getAttribute('data-application-email');
+      var emailQuery = new URLSearchParams({
+        subject: "Duke's job application",
+        body: applicationLines.join('\n')
+      });
+
+      window.location.href = 'mailto:' + recipient + '?' + emailQuery.toString();
+    });
+  }
 });
